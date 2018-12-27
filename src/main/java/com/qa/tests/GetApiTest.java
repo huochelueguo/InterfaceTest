@@ -1,20 +1,18 @@
 package com.qa.tests;
 
 
-import java.io.IOException;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.qa.base.TestBase;
 import com.qa.com.qa.util.TestUtil;
-import org.apache.http.client.ClientProtocolException;
+import com.qa.restclient.RestClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.qa.base.TestBase;
-import com.qa.restclient.RestClient;
+import java.io.IOException;
 
 public class GetApiTest extends TestBase {
     TestBase testBase;
@@ -49,7 +47,7 @@ public class GetApiTest extends TestBase {
         String s = TestUtil.getValueByJPath(responseJson, "results[0]/location/name");
         Assert.assertEquals(s,"北京","城市应该为北京");
         System.out.println(s);
-
+        //测试测试测试
 
     }
 }
