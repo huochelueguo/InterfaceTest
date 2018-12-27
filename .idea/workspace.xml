@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7aa850a-6d3d-4c91-9a01-dbf50c05c9e0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qa/com/qa/util/TestUtil.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloWorld.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/base/TestWeather.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/base/TestBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/config/config.properties" afterPath="$PROJECT_DIR$/src/main/java/com/qa/config/config.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/restclient/RestClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/restclient/RestClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/tests/GetApiTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/tests/GetApiTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HelloWorld.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/base/TestWeather.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/restclient/RestClient.class" afterPath="$PROJECT_DIR$/target/classes/com/qa/restclient/RestClient.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/tests/GetApiTest.class" afterPath="$PROJECT_DIR$/target/classes/com/qa/tests/GetApiTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -661,7 +650,7 @@
       <option name="presentableId" value="Default" />
       <updated>1545830684147</updated>
       <workItem from="1545830687552" duration="7446000" />
-      <workItem from="1545876921685" duration="13556000" />
+      <workItem from="1545876921685" duration="14394000" />
     </task>
     <servers />
   </component>
@@ -698,7 +687,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21002000" />
+    <option name="totallyTimeSpent" value="21840000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -711,7 +700,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -724,8 +712,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.091738194" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17541899" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1877095" sideWeight="0.49356222" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46256983" sideWeight="0.49570817" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37765363" sideWeight="0.49356222" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.49590644" order="0" side_tool="false" content_ui="combo" />
