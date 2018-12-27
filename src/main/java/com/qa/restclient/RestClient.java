@@ -15,8 +15,7 @@ import com.alibaba.fastjson.JSONObject;
 
 public class RestClient {
 
-
-    //1. Get 请求方法
+   /* //1. Get 请求方法
     public void get(String url) throws ClientProtocolException, IOException {
 
         //创建一个可关闭的HttpClient对象
@@ -25,18 +24,14 @@ public class RestClient {
         HttpGet httpget = new HttpGet(url);
         //执行请求,相当于postman上点击发送按钮，然后赋值给HttpResponse对象接收
         CloseableHttpResponse httpResponse = httpclient.execute(httpget);
-
         //拿到Http响应状态码，例如和200,404,500去比较
         int responseStatusCode = httpResponse.getStatusLine().getStatusCode();
         System.out.println("response status code -->"+responseStatusCode);
-
         //把响应内容存储在字符串对象
         String responseString = EntityUtils.toString(httpResponse.getEntity(),"UTF-8");
-
         //创建Json对象，把上面字符串序列化成Json对象
         JSONObject responseJson = JSON.parseObject(responseString);
         System.out.println("respon json from API-->" + responseJson);
-
         //获取响应头信息,返回是一个数组
         Header[] headerArray = httpResponse.getAllHeaders();
         //创建一个hashmap对象，通过postman可以看到请求响应头信息都是Key和value得形式，所以我们想起了HashMap
@@ -45,9 +40,18 @@ public class RestClient {
         for(Header header : headerArray) {
             hm.put(header.getName(), header.getValue());
         }
-
         //打印hashmap
         System.out.println("response headers -->"+ hm);
+    }*/
+   //1. Get 请求方法
+    public CloseableHttpResponse  get (String url) throws IOException {
+//        （1）创建HttpClient对象。
+        CloseableHttpClient HttpClient = HttpClients.createDefault();
+//        （2）创建httpget请求对象
+        HttpGet httpGet = new HttpGet(url);
+//        （3）执行请求,相当于postman上点击发送按钮，然后赋值给HttpResponse对象接收
+        CloseableHttpResponse httpResponse = HttpClient.execute(httpGet);
+        return  httpResponse;
 
     }
 
