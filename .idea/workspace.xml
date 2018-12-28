@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7aa850a-6d3d-4c91-9a01-dbf50c05c9e0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qa/data/Login.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qa/tests/LoginTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/base/TestBase.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/base/TestBase.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/com/qa/util/TestUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/util/TestUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/config/config.properties" afterPath="$PROJECT_DIR$/src/main/java/com/qa/config/config.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/restclient/RestClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/restclient/RestClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/tests/GetApiTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/qa/tests/GetApiTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/tests/GetApiTest.class" afterPath="$PROJECT_DIR$/target/classes/com/qa/tests/GetApiTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/base/TestBase.class" afterPath="$PROJECT_DIR$/target/classes/com/qa/base/TestBase.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/com/qa/util/TestUtil.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/restclient/RestClient.class" afterPath="$PROJECT_DIR$/target/classes/com/qa/restclient/RestClient.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,8 +85,8 @@
       <file leaf-file-name="LoginTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qa/tests/LoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="266">
+              <caret line="32" column="72" lean-forward="true" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#920#935#0" expanded="true" />
@@ -159,6 +154,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -782,8 +780,16 @@
       <workItem from="1545830687552" duration="7446000" />
       <workItem from="1545876921685" duration="14768000" />
       <workItem from="1545917756644" duration="2370000" />
-      <workItem from="1545963487621" duration="18395000" />
+      <workItem from="1545963487621" duration="18610000" />
     </task>
+    <task id="LOCAL-00001" summary="增加POST封装">
+      <created>1545992959315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545992959315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -819,7 +825,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42979000" />
+    <option name="totallyTimeSpent" value="43194000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -845,7 +851,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2719957" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34189945" sideWeight="0.49356222" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19553073" sideWeight="0.49356222" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30167598" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -873,7 +879,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="增加POST封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加POST封装" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1247,8 +1254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qa/tests/LoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="266">
+          <caret line="32" column="72" lean-forward="true" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#920#935#0" expanded="true" />
