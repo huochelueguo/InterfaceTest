@@ -9,6 +9,7 @@
 out
 gen
 target/classes/com/qa/data/
+target/*
 target/classes/com/qa/tests/LoginTest.class
 target/classes/com/qa/util/
 target/generated-sources/

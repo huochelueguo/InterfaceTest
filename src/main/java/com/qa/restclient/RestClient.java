@@ -1,23 +1,63 @@
 //请求方法的封装
 package com.qa.restclient;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.apache.http.Header;
-import org.apache.http.client.ClientProtocolException;
+import org.apache.http.Consts;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.config.ConnectionConfig;
+import org.apache.http.config.Registry;
+import org.apache.http.config.RegistryBuilder;
+import org.apache.http.config.SocketConfig;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.util.EntityUtils;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RestClient {
+    private static CloseableHttpClient httpclient = null;
+
+    // TODO
+    static {
+        httpclient = buildHttpClient(200, 20);
+    }
+
+    public static CloseableHttpClient buildHttpClient(Integer maxTotal, Integer maxPerRoute) {
+        final int kMaxTotal = maxTotal == null ? 2000 : maxTotal;
+        final int kMaxPerRoute = maxPerRoute == null ? 2000 : maxPerRoute;
+
+        Registry<ConnectionSocketFactory> r =
+                RegistryBuilder.<ConnectionSocketFactory>create().register("http", PlainConnectionSocketFactory.INSTANCE)
+                        .build();
+
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager(r);
+
+        // ConnectionConfig
+        ConnectionConfig connectionConfig = ConnectionConfig.custom().setCharset(Consts.UTF_8).build();
+        SocketConfig socketConfig =
+                SocketConfig.custom().setTcpNoDelay(true).setSoKeepAlive(true).setSoReuseAddress(true).setSoTimeout(1000)
+                        .build();
+
+        cm.setDefaultConnectionConfig(connectionConfig);
+        cm.setDefaultSocketConfig(socketConfig);
+        // 将最大连接数增加到2000
+        cm.setMaxTotal(kMaxTotal);
+        // 将每个路由基础的连接增加到2000
+        cm.setDefaultMaxPerRoute(kMaxPerRoute);
+
+        return HttpClients.custom().setConnectionManager(cm).build();
+    }
 
    /* //1. Get 请求方法
     public void get(String url) throws ClientProtocolException, IOException {
@@ -82,12 +122,66 @@ public class RestClient {
 //        创建HttpPost对象
         HttpPost httpPost = new HttpPost(url);
         for (Map.Entry<String,String>entry:headermap.entrySet()
-             ) {
+                ) {
             httpPost.addHeader(entry.getKey(),entry.getValue());
         }
+
+        //设置body值
+        StringEntity entity = new StringEntity(entityString, Charset.forName("UTF-8"));
+        entity.setContentEncoding("UTF-8");
+        // 发送Json格式的数据请求
+        entity.setContentType("application/json");
+        httpPost.setEntity(entity);
+
+
         CloseableHttpResponse closeableHttpResponse ;
         closeableHttpResponse = httpClient.execute(httpPost);
         return  closeableHttpResponse;
+    }
+
+
+    public static String httpPostJson(String url, String json, String encoding, int connectTimeout, int readTimeout) {
+        HttpPost post = new HttpPost(url);
+        try {
+            post.setHeader("Content-type", "application/json");
+            RequestConfig requestConfig =
+                    RequestConfig.custom().setSocketTimeout(readTimeout).setConnectTimeout(connectTimeout)
+                            .setConnectionRequestTimeout(connectTimeout).setExpectContinueEnabled(false).build();
+            post.setConfig(requestConfig);
+            if (json == null || "".equals(json)) {
+                post.setEntity(new StringEntity(json, encoding));
+            }
+            //logger.info("[HttpUtils Post] begin invoke url:{}", url);
+            CloseableHttpResponse response = httpclient.execute(post);
+            try {
+                HttpEntity entity = response.getEntity();
+                try {
+                    if (entity != null) {
+                        String str = EntityUtils.toString(entity, encoding);
+                        /*
+                         * logger.info("[HttpUtils Post]Debug response, url :" + url + " , response string :" +
+                         * str);
+                         */
+                        return str;
+                    }
+                } finally {
+                    if (entity != null) {
+                        entity.getContent().close();
+                    }
+                }
+            } finally {
+                if (response != null) {
+                    response.close();
+                }
+            }
+        } catch (UnsupportedEncodingException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            post.releaseConnection();
+        }
+        return "";
     }
 
 }
