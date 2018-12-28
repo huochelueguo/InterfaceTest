@@ -12,3 +12,4 @@ target/classes/com/qa/data/
 target/classes/com/qa/tests/LoginTest.class
 target/classes/com/qa/util/
 target/generated-sources/
+.DS_Store
