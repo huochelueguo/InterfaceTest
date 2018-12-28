@@ -1,4 +1,4 @@
-package com.qa.com.qa.util;
+package com.qa.util;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 public class TestUtil {

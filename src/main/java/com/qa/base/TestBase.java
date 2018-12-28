@@ -1,3 +1,4 @@
+//所有接口请求测试的父类，都要继承这个类，实现加载读取properties文件
 package com.qa.base;
 
 import java.io.FileInputStream;
@@ -17,6 +18,7 @@ public class TestBase {
 
         try {
             prop = new Properties();
+            //读取Property文件
             FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+
                     "/src/main/java/com/qa/config/config.properties");
             prop.load(fis);

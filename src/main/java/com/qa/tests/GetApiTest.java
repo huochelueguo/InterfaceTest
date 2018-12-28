@@ -4,7 +4,7 @@ package com.qa.tests;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.qa.base.TestBase;
-import com.qa.com.qa.util.TestUtil;
+import com.qa.util.TestUtil;
 import com.qa.restclient.RestClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
@@ -19,7 +19,7 @@ public class GetApiTest extends TestBase {
     String host;
     String url;
     RestClient restClient;
-    CloseableHttpResponse closeableHttpResponse;
+    private CloseableHttpResponse closeableHttpResponse;
 
 
     @BeforeClass
