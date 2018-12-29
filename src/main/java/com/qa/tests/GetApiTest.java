@@ -44,6 +44,7 @@ public class GetApiTest extends TestBase {
 //        字符串转为json对象
         JSONObject responseJson = JSON.parseObject(responseString);
 //        字符串解析
+        System.out.println(responseJson);
         String s = TestUtil.getValueByJPath(responseJson, "results[0]/location/name");
         Assert.assertEquals(s,"北京","城市应该为北京");
         System.out.println(s);

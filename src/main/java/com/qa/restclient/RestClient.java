@@ -62,7 +62,7 @@ public class RestClient {
         return  httpResponse;
     }
 
-//    2.Get请求，请求内容在map中
+//  2.Get请求，请求内容在map中
     public CloseableHttpResponse get(String url,HashMap<String,String> headermap) throws IOException {
 //        创建一个可关闭的HttpClient对象
         CloseableHttpClient httpclient  = HttpClients.createDefault();
@@ -80,7 +80,7 @@ public class RestClient {
         return httpResponse1;
     }
 
-//    3.Post请求，参数为JSON，放在请求体中
+//  3.Post请求，参数为JSON，放在请求体中
     public CloseableHttpResponse post(String url,String entityString,HashMap<String,String>headermap) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
 //        创建HttpPost对象
