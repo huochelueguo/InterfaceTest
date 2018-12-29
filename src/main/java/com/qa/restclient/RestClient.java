@@ -1,19 +1,22 @@
-//请求方法的封装
-package com.qa.restclient;
 
+
+//请求方法的封装
+
+
+package com.qa.restclient;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.apache.http.Header;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
@@ -77,14 +80,22 @@ public class RestClient {
         return httpResponse1;
     }
 
+//    3.Post请求，参数为JSON，放在请求体中
     public CloseableHttpResponse post(String url,String entityString,HashMap<String,String>headermap) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
 //        创建HttpPost对象
         HttpPost httpPost = new HttpPost(url);
+//        请求头参数传入请求中
         for (Map.Entry<String,String>entry:headermap.entrySet()
              ) {
             httpPost.addHeader(entry.getKey(),entry.getValue());
         }
+//        请求体传入参数，并且为JSON格式
+        StringEntity entity = new StringEntity(entityString,Charset.forName("UTF-8"));
+        entity.setContentEncoding("UTF-8");
+        entity.setContentType("application/json");
+        httpPost.setEntity(entity);
+//        发送请求，并且接收返回值
         CloseableHttpResponse closeableHttpResponse ;
         closeableHttpResponse = httpClient.execute(httpPost);
         return  closeableHttpResponse;

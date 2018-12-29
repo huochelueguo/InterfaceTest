@@ -15,10 +15,10 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class GetApiTest extends TestBase {
-    TestBase testBase;
-    String host;
-    String url;
-    RestClient restClient;
+    private TestBase testBase;
+    private String host;
+    private String url;
+    private RestClient restClient;
     private CloseableHttpResponse closeableHttpResponse;
 
 
